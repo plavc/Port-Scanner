@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.24"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkImage" id="imageClose">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="xalign">1</property>
+    <property name="yalign">0</property>
+    <property name="stock">gtk-remove</property>
+  </object>
+  <object class="GtkTable" id="labelPage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="n_columns">2</property>
+    <child>
+      <object class="GtkLabel" id="title">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">[plavcak.net]</property>
+        <attributes>
+          <attribute name="weight" value="bold"/>
+        </attributes>
+      </object>
+    </child>
+    <child>
+      <object class="GtkButton" id="buttonClose">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="receives_default">True</property>
+        <property name="use_action_appearance">False</property>
+        <property name="image">imageClose</property>
+        <property name="relief">none</property>
+        <property name="yalign">1</property>
+        <signal name="clicked" handler="on_buttonClose_clicked" swapped="no"/>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="right_attach">2</property>
+        <property name="x_options"></property>
+        <property name="y_options">GTK_FILL</property>
+      </packing>
+    </child>
+  </object>
+</interface>
